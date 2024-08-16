@@ -18,7 +18,7 @@ Before you proceed, please read the following important note:
      ```bash
      curl -o sign.py https://raw.githubusercontent.com/minersunion/voting/sign.py && python3 sign.py
      ```
-  2. Follow the on-screen instructions to cast your vote with your stake.
+  2. Follow the on-screen instructions to cast your vote for the subnet weights
 
 ---
 
