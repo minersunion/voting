@@ -16,7 +16,7 @@ Before you proceed, please read the following important note:
 - **Step-by-Step Instructions:**
   1. Download and run the `sign_endpoint.py` script using the following command:
      ```bash
-     curl -o sign_endpoint.py https://raw.githubusercontent.com/minersunion/supertensor/main/to_migrate/src/voting/sign.py && python3 sign_endpoint.py
+     curl -o sign.py https://raw.githubusercontent.com/minersunion/voting/sign.py && python3 sign.py
      ```
   2. Follow the on-screen instructions to cast your vote with your stake.
 
