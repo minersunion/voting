@@ -16,7 +16,7 @@ Before you proceed, please read the following important note:
 - **Step-by-Step Instructions:**
   1. Download and run the `sign_endpoint.py` script using the following command:
      ```bash
-     curl -o sign.py https://raw.githubusercontent.com/minersunion/voting/sign.py && python3 sign.py
+     curl -o sign.py https://raw.githubusercontent.com/minersunion/voting/main/sign.py && python3 sign.py
      ```
   2. Follow the on-screen instructions to cast your vote for the subnet weights
 
