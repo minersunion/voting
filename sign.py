@@ -1,4 +1,3 @@
-import sys
 import json
 import logging
 import requests
@@ -101,7 +100,7 @@ print(f"{GREEN}Vote data to send:{RESET}")
 print(json.dumps(vote_data, indent=4))
 
 # Send the data to the server endpoint
-url = "http://api.minersunion.ai/votes/process_vote/"
+url = "https://api.minersunion.ai/votes/process_vote/"
 headers = {'Content-Type': 'application/json'}
 try:
     response = requests.post(url, headers=headers, json=vote_data)
