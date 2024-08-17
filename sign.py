@@ -24,14 +24,6 @@ logger.info(f"Using wallet path: {wallet_path}")
 # Load your wallet
 my_wallet = btcli_wallet(name=wallet_name, path=wallet_path)
 
-# Load your private key (coldkey)
-try:
-    coldkey = my_wallet.get_coldkey()
-    logger.info("Coldkey loaded successfully.")
-except Exception as e:
-    logger.error(f"Error loading coldkey: {e}")
-    exit(1)
-
 # Prompt for the message details to create the JSON
 print(f"{CYAN}Enter the details for the vote message:{RESET}")
 subnets: list[dict[str, int | float]] = []
@@ -74,6 +66,14 @@ try:
     logger.info("Vote message JSON is valid.")
 except json.JSONDecodeError as e:
     logger.error(f"\nInvalid JSON input: {e}")
+    exit(1)
+
+# Load your private key (coldkey)
+try:
+    coldkey = my_wallet.get_coldkey()
+    logger.info("Coldkey loaded successfully.")
+except Exception as e:
+    logger.error(f"Error loading coldkey: {e}")
     exit(1)
 
 # Sign the message
