@@ -1,0 +1,3 @@
+venv/
+.venv/
+vote_data.json

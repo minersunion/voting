@@ -1,5 +1,6 @@
 import json
 import logging
+from datetime import datetime, timezone
 import requests
 from bittensor import wallet as btcli_wallet
 from substrateinterface import Keypair
@@ -56,7 +57,13 @@ if not subnets:
     print(f"{RED}No subnets entered. Exiting.{RESET}")
     exit(1)
 
-vote_message: str = json.dumps(subnets, indent=4)
+vote_message: str = json.dumps(
+    {
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "weights": subnets,
+    },
+    indent=None,
+)
 print(f"{GREEN}Generated vote message:{RESET}")
 print(vote_message)
 
